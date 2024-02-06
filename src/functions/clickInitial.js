@@ -17,4 +17,4 @@ function clickInitial() {
     } 
 }
 
-module.exports = clickInitial; // Exporta a função clickInitial
+module.exports = clickInitial;

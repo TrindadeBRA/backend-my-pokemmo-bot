@@ -4,6 +4,7 @@ const cors = require('cors');
 const http = require('http');
 const socketIo = require('socket.io');
 const { runTestRoute } = require('./src/roadmaps/testRoute'); // Importa a função runTestRoute
+const { hordesCoinsExp } = require('./src/roadmaps/kanto/island5/hordes-coins-exp'); // Importa a função runTestRoute
 
 const app = express();
 const port = 3000;
@@ -20,7 +21,7 @@ const io = socketIo(server, {
 
 app.get('/api/roadmaps/test', async (req, res) => {
   try {
-      const message = await runTestRoute(io); // Usa a função runTestRoute
+      const message = await hordesCoinsExp(io); // Usa a função hordesCoinsExp
 
       res.status(200).json({ message });
   } catch (error) {

@@ -6,4 +6,4 @@ function sleep(ms) {
     });
 }
 
-module.exports = sleep; // Exporta a função clickInitial
+module.exports = sleep;
